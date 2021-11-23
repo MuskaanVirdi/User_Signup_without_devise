@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.db {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.db li {
+  float: left;
+  border-right:1px solid #bbb;
+}
+
+.db li:last-child {
+  border-right: none;
+}
+
+.db li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.db li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+</style>
+</head>
+<body>
+
+<ul class="db">
+  <li><a class="active" href="#home">Dashboard</a></li>
+  <li style="float:right;border-left:1px solid #bbb;"><%= link_to('Logout', { action: 'logout', controller: 'account'},    class: 'btn btn-danger') %> </li>
+  <li style="float:right;border-left:1px solid #bbb;"><%= link_to('Reset Password', { action: 'reset_password', controller: 'password'}) %></li> 
+  <li style="float:right;border-left:1px solid #bbb;"> <%= link_to('Edit Profile', { action: 'edit_profile', controller: 'profile'}) %> </li>
+  
+</ul>
+
+</body>
+</html>

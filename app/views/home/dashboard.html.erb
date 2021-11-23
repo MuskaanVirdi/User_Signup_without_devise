@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<div class="container">
+<h2 style="text-align:center">
+<%= @user.first_name %> Details is:
+</h2>
+      <div class="our-team">
+        <div class="picture">
+           <%= image_tag(@user.profile_image, style: 'height:100%; width:100%;') if @user.profile_image.attached? %>
+        </div>
+        <div class="team-content">
+          <h3 class="name" style="color:navy">Name: <%= @user.first_name %> <%= @user.last_name %></h3>
+          <h4 class="name" style="color:navy">DOB: <%= @user.date_of_birth %></h4>
+          <h4 class="title" style="color:navy">Mobile: <%= @user.mobile %></h4>
+          <h4  style="color:navy">Email: <%= @user.email %></h4>
+        </div>
+      
+      </div>
+    
+</div>
